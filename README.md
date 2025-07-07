@@ -14,3 +14,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+# work time
+
+Navbar - 1h 6mins
