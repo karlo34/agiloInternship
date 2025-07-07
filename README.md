@@ -17,4 +17,4 @@ bun dev
 
 # work time
 
-Navbar - 1h 6mins
+Navbar - 1h 6mins active coding

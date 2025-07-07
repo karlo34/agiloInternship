@@ -3,7 +3,7 @@ import { Search, ShoppingBag, ChevronDown, Menu } from "lucide-react";
 
 const Navbar = () => {
     return (
-        <nav className="w-full px-8 lg:px-14 py-6 flex flex-wrap items-center justify-between">
+        <nav className="px-8 lg:px-14 py-6 flex flex-wrap items-center justify-between">
             <h1 className="text-2xl font-semibold whitespace-nowrap">
                 <Link href="/">SofaSocietyCo.</Link>
             </h1>
@@ -15,7 +15,7 @@ const Navbar = () => {
                     <Link href="#">Inspiration</Link>
                 </li>
                 <li className="hover:text-gray-700 transition">
-                    <Link href="#">Shop</Link>
+                    <Link href="/shop">Shop</Link>
                 </li>
             </ul>
 
