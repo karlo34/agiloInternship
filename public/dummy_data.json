@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "product": "Scandinavian Simplicity",
+    "img": "/slike/Scandinavian_Simplicity.png"
+  },
+  {
+    "id": 2,
+    "product": "Couch",
+    "img": "/slike/Modern_Luxe.png"
+  },
+  {
+    "id": 3,
+    "product": "Couch",
+    "img": "/slike/Boho_Chic.png"
+  },
+  {
+    "id": 4,
+    "product": "Couch",
+    "img": "/slike/Timeless_Classics.png"
+  }
+]

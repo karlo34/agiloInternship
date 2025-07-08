@@ -1,12 +1,22 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import { Search, ShoppingBag, ChevronDown, Menu } from "lucide-react";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State for the sliding menu
+
+    const handleMenuToggle = () => {
+        setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+    };
+
     return (
-        <nav className="px-8 lg:px-14 py-6 flex flex-wrap items-center justify-between">
+        <nav className="pt-6 mb-[106px] flex flex-wrap items-center justify-between relative">
             <h1 className="text-2xl font-semibold whitespace-nowrap">
                 <Link href="/">SofaSocietyCo.</Link>
             </h1>
+            
+            {/* Desktop menu */}
             <ul className="hidden sm:flex items-center gap-10 text-sm tracking-wide mr-10">
                 <li className="hover:text-gray-700 transition">
                     <Link href="#">About</Link>
@@ -19,6 +29,7 @@ const Navbar = () => {
                 </li>
             </ul>
 
+            {/* Right side buttons */}
             <div className="flex relative items-center gap-6 text-sm">
                 <div className="hidden sm:flex relative">
                     <select
@@ -40,11 +51,36 @@ const Navbar = () => {
                     <ShoppingBag className="w-5 h-5" />
                 </button>
 
-                <button aria-label="Menu" className="flex sm:hidden hover:text-gray-700">
-                    <Menu className="w-5 h-5" />
+                {/* Mobile menu button (hamburger) */}
+                <button
+                    aria-label="Menu"
+                    className={`flex sm:hidden hover:text-gray-700 z-50`}
+                    onClick={handleMenuToggle}
+                >
+                    <Menu className={`w-5 h-5 ${isMenuOpen ? "text-white" : "text-black"}`} />
                 </button>
             </div>
-            {/* <div className="fixed top-0 left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-500 z-50"></div> */}
+
+            {/* Sliding Menu for Mobile */}
+            <div
+                className={`fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 z-10 transform transition-transform duration-400 ${
+                    isMenuOpen ? "translate-x-0" : "translate-x-full"
+                }`}
+            >
+                <div className="flex flex-col items-center justify-center h-full text-white">
+                    <ul className="text-2xl space-y-6">
+                        <li>
+                            <Link href="#" onClick={handleMenuToggle}>About</Link>
+                        </li>
+                        <li>
+                            <Link href="#" onClick={handleMenuToggle}>Inspiration</Link>
+                        </li>
+                        <li>
+                            <Link href="/shop" onClick={handleMenuToggle}>Shop</Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     );
 };

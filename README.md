@@ -18,3 +18,6 @@ bun dev
 # work time
 
 Navbar - 1h 6mins active coding
+Footer - 36mins active coding
+
+Fixing layout - 14mins

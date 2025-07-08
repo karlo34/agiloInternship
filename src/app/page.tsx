@@ -1,12 +1,16 @@
 import Navbar from "./components/Nav";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center ">
-      <Navbar />
-      <div className="flex h-[90vh] justify-center">
-        <h1>Home page</h1>
+    <div className="flex flex-col w-full">
+      <div className="mx-[5%]">
+        <Navbar />
+        <div className="flex justify-center">
+          <h1>Home page</h1>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }
