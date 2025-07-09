@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "collection": "Scandy",
     "product": "Scandinavian Simplicity",
     "img": "/slike/Scandinavian_Simplicity.png",
     "breefly": "Minimalistic designs, neutral colors, and high-quality textures",
@@ -9,6 +10,7 @@
   },
   {
     "id": 2,
+    "collection": "Modern",
     "product": "Modern Luxe",
     "img": "/slike/Modern_Luxe.png",
     "breefly": "Sophisticated and sleek, these sofas blend modern design with luxurious comfort",
@@ -17,6 +19,7 @@
   },
   {
     "id": 3,
+    "collection": "Chic",
     "product": "Boho Chic",
     "img": "/slike/Boho_Chic.png",
     "breefly": "Eclectic charm, vibrant patterns, and laid-back comfort",
@@ -25,6 +28,7 @@
   },
   {
     "id": 4,
+    "collection": "Classic",
     "product": "Timeless Classics",
     "img": "/slike/Timeless_Classics.png",
     "breefly": "Elegant designs inspired by traditional craftsmanship and enduring appeal",

@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import url('https://cdn.jsdelivr.net/npm/mona-sans@1.0.0/css/mona-sans.min.css');
 
 :root {
   --background: #FDFDFD;
   --foreground: #050505;
+  --font-family-base: 'Mona Sans', sans-serif;
 }
 
 @theme inline {
@@ -16,6 +18,7 @@
   :root {
     --background: #FDFDFD;
     --foreground: #050505;
+    --font-family-base: 'Mona Sans', sans-serif;
   }
 }
 
@@ -23,5 +26,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: "Mona-Sans";
+   font-family: var(--font-family-base);
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('https://github.githubassets.com/assets/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('https://github.githubassets.com/assets/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-mona {
+  font-family: 'Mona Sans', sans-serif;
 }

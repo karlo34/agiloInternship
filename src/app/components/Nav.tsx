@@ -11,7 +11,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="pt-[31px] mb-[106px] flex flex-wrap items-center justify-between relative">
+        <nav className="mb-[0px] pt-[31px] sm:mb-[106px] px-5 sm:px-0 flex flex-wrap items-center justify-between relative">
             <h1 className="text-2xl font-semibold whitespace-nowrap">
                 <Link href="/">SofaSocietyCo.</Link>
             </h1>

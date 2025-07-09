@@ -5,7 +5,7 @@ import Collections from "../components/Collections";
 const Shop = () => {
     return (
         <div className="min-h-[100vh]">
-            <div className="mx-[5%]">
+            <div className="mx-[6%]">
                 <Navbar />
                 <div className="flex flex-col items-center">
                     <Collections />

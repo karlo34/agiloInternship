@@ -5,9 +5,12 @@ import Image from "next/image";
 
 type Product = {
     id: number;
+    collection: string;
     product: string;
     img: string;
-    //   description: string;
+    breefly: string;
+    description: string;
+    price: number;
 };
 
 const Collections = () => {
@@ -34,24 +37,26 @@ const Collections = () => {
                     Collections
                 </h1>
                 <div className="hidden sm:flex gap-2">
-                    <button className="flex items-center justify-center w-10 h-10 border border-black rounded-full">
-                        <ArrowLeftIcon className="w-5 h-5 text-black hover:cursor-pointer" />
+                    <button className="group flex items-center justify-center w-10 h-10 border border-black hover:cursor-pointer hover:bg-black rounded-full">
+                        <ArrowLeftIcon className="w-5 h-5 text-black group-hover:text-white" />
                     </button>
-                    <button className="flex items-center justify-center w-10 h-10 border border-black rounded-full">
-                        <ArrowRightIcon className="w-5 h-5 text-black hover:cursor-pointer" />
+                    <button className="group flex items-center justify-center hover:cursor-pointer w-10 h-10 border border-black hover:bg-black rounded-full">
+                        <ArrowRightIcon className="w-5 h-5 text-black group-hover:text-white" />
                     </button>
                 </div>
-                <button className="flex sm:hidden rounded-sm px-4 py-1 text-sm font-medium text-white bg-black">
+                <button className="flex sm:hidden items-center w-[75px] h-[32px] rounded-sm px-4 py-1 text-xs font-medium text-white bg-black">
                     View All
                 </button>
+
+                {/* 75 32 */}
             </div>
 
             {/* Product Grid */}
             {products ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    {products.map((product, index) => (
-                        <div key={index} className="flex flex-col">
-                            <div className="h-[390px] w-[292px] relative overflow-hidden">
+                <div className="flex justify-between">
+                    {products.map((product) => (
+                        <div key={product.id} data-collection={product.collection} className="flex flex-col w-[292px]">
+                            <div className="relative overflow-hidden h-[390px] w-[292px]">
                                 <Image
                                     src={product.img}
                                     alt={product.product}
@@ -59,11 +64,11 @@ const Collections = () => {
                                     className="object-cover"
                                 />
                             </div>
-                            <h3 className="mt-4 text-[16px] font-normal">
+                            <h3 className="mt-4 text-[16px]">
                                 {product.product}
                             </h3>
-                            <p className="text-sm text-gray-500">
-                                {/* {product.description} */}
+                            <p className="block sm:hidden text-sm text-gray-500">
+                                {product.breefly}
                             </p>
                         </div>
                     ))}
