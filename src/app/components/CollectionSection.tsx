@@ -4,13 +4,13 @@ import { Product } from './types'; // adjust path accordingly
 
 interface Props {
     products: Product[] | null;
+    maxItems?: number;
 }
 
-export default function Collection({ products}: Props) {
+export default function CollectionSection({ products, maxItems }: Props) {
     if (!products) return <p>Loading...</p>;
 
-    const displayProducts = products;
-    console.log("Products: ", displayProducts);
+    const displayProducts = maxItems ? products.slice(0, maxItems) : products;
 
     return (
         <div className="flex flex-wrap justify-between gap-x-4 gap-y-6">

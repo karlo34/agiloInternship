@@ -28,11 +28,92 @@
   },
   {
     "id": 4,
-    "collection": "Classic",
-    "product": "Timeless Classics",
+    "collection": "Scandy",
+    "product": "Timeless Classic",
     "img": "/slike/Timeless_Classics.png",
-    "breefly": "Elegant designs inspired by traditional craftsmanship and enduring appeal",
-    "description": "The Timeless Classics collection pays homage to traditional elegance. With tufted cushions, curved arms, and durable fabrics, these couches are built to bring comfort and grace to your living space for years to come.",
-    "price": "13000"
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Astrid Curve features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": "14000"
+  },
+  {
+    "id": 5,
+    "collection": "Modern",
+    "product": "Nordic Haven",
+    "img": "/slike/Nordic_Haven.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": "15500"
+  },
+  {
+    "id": 6,
+    "collection": "Modern",
+    "product": "Everly Estate",
+    "img": "/slike/Everly_Estate.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": "15500"
+  },
+  {
+    "id": 7,
+    "collection": "Scandy",
+    "product": "Belime Haven",
+    "img": "/slike/Belime_Haven.png",
+    "breefly": "Minimalistic designs, neutral colors, and high-quality textures",
+    "description": "Minimalistic designs, neutral colors, and high-quality textures. Perfect for those who seek comfort with a clean and understated aesthetic. This collection brings the essence of Scandinavian elegance to your living room",
+    "price": "12000"
+  },
+  {
+    "id": 8,
+    "collection": "Modern",
+    "product": "Camden Retreat",
+    "img": "/slike/Camden_Retreat.jpg",
+    "breefly": "Sophisticated and sleek, these sofas blend modern design with luxurious comfort",
+    "description": "The Modern Luxe collection is where contemporary design meets timeless luxury. Sleek lines, premium materials, and plush seating make these couches perfect for upscale urban interiors.",
+    "price": "15000"
+  },
+  {
+    "id": 9,
+    "collection": "Chic",
+    "product": "Astrid Curve",
+    "img": "/slike/Astrid_Curve.png",
+    "breefly": "Eclectic charm, vibrant patterns, and laid-back comfort",
+    "description": "Embrace the carefree spirit with the Boho Chic collection. Featuring rich textures, earthy tones, and playful patterns, these couches create a warm and inviting vibe that’s both stylish and cozy.",
+    "price": "11000"
+  },
+  {
+    "id": 10,
+    "collection": "Scandy",
+    "product": "Astrid Curve",
+    "img": "/slike/Astrid_Curve.jpg",
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Astrid Curve features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": "14000"
+  },
+  {
+    "id": 11,
+    "collection": "Modern",
+    "product": "Paloma Haven",
+    "img": "/slike/Paloma_Haven.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": "15500"
+  },
+  {
+    "id": 12,
+    "collection": "Scandy",
+    "product": "Paloma Haven",
+    "img": "/slike/Paloma Haven.jpg",
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Astrid Curve features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": "14000"
+  },
+  {
+    "id": 13,
+    "collection": "Modern",
+    "product": "Sutton Royale",
+    "img": "/slike/Sutton_Royale.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": "15500"
   }
 ]
