@@ -27,13 +27,13 @@ const Collections = () => {
     }, []);
 
     return (
-        <section className="w-full px-4 md:px-12 py-10">
+        <section className="w-full py-10">
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
                 <h1 className="text-3xl md:text-4xl font-semibold text-black">
                     Collections
                 </h1>
-                <div className="flex gap-2">
+                <div className="hidden sm:flex gap-2">
                     <button className="flex items-center justify-center w-10 h-10 border border-black rounded-full">
                         <ArrowLeftIcon className="w-5 h-5 text-black hover:cursor-pointer" />
                     </button>
@@ -41,9 +41,9 @@ const Collections = () => {
                         <ArrowRightIcon className="w-5 h-5 text-black hover:cursor-pointer" />
                     </button>
                 </div>
-                {/* <button className="px-4 py-1 text-sm font-medium text-white bg-black rounded-md">
+                <button className="flex sm:hidden rounded-sm px-4 py-1 text-sm font-medium text-white bg-black">
                     View All
-                </button> */}
+                </button>
             </div>
 
             {/* Product Grid */}
@@ -51,7 +51,7 @@ const Collections = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     {products.map((product, index) => (
                         <div key={index} className="flex flex-col">
-                            <div className="w-full h-[390px] relative overflow-hidden">
+                            <div className="h-[390px] w-[292px] relative overflow-hidden">
                                 <Image
                                     src={product.img}
                                     alt={product.product}
@@ -59,7 +59,7 @@ const Collections = () => {
                                     className="object-cover"
                                 />
                             </div>
-                            <h3 className="mt-4 text-lg font-semibold text-black">
+                            <h3 className="mt-4 text-[16px] font-normal">
                                 {product.product}
                             </h3>
                             <p className="text-sm text-gray-500">

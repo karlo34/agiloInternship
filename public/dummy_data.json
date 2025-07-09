@@ -2,21 +2,33 @@
   {
     "id": 1,
     "product": "Scandinavian Simplicity",
-    "img": "/slike/Scandinavian_Simplicity.png"
+    "img": "/slike/Scandinavian_Simplicity.png",
+    "breefly": "Minimalistic designs, neutral colors, and high-quality textures",
+    "description": "Minimalistic designs, neutral colors, and high-quality textures. Perfect for those who seek comfort with a clean and understated aesthetic. This collection brings the essence of Scandinavian elegance to your living room",
+    "price": "12000"
   },
   {
     "id": 2,
-    "product": "Couch",
-    "img": "/slike/Modern_Luxe.png"
+    "product": "Modern Luxe",
+    "img": "/slike/Modern_Luxe.png",
+    "breefly": "Sophisticated and sleek, these sofas blend modern design with luxurious comfort",
+    "description": "The Modern Luxe collection is where contemporary design meets timeless luxury. Sleek lines, premium materials, and plush seating make these couches perfect for upscale urban interiors.",
+    "price": "15000"
   },
   {
     "id": 3,
-    "product": "Couch",
-    "img": "/slike/Boho_Chic.png"
+    "product": "Boho Chic",
+    "img": "/slike/Boho_Chic.png",
+    "breefly": "Eclectic charm, vibrant patterns, and laid-back comfort",
+    "description": "Embrace the carefree spirit with the Boho Chic collection. Featuring rich textures, earthy tones, and playful patterns, these couches create a warm and inviting vibe that’s both stylish and cozy.",
+    "price": "11000"
   },
   {
     "id": 4,
-    "product": "Couch",
-    "img": "/slike/Timeless_Classics.png"
+    "product": "Timeless Classics",
+    "img": "/slike/Timeless_Classics.png",
+    "breefly": "Elegant designs inspired by traditional craftsmanship and enduring appeal",
+    "description": "The Timeless Classics collection pays homage to traditional elegance. With tufted cushions, curved arms, and durable fabrics, these couches are built to bring comfort and grace to your living space for years to come.",
+    "price": "13000"
   }
 ]
