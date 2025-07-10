@@ -1,8 +1,8 @@
 
 
 const Footer = () => {
-    return (
-        <footer className="bg-[#F4F4F4] mt-[75vh]">
+  return (
+    <footer className="bg-[#F4F4F4] mt-[10vh]">
       <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-12 lg:flex-row lg:justify-between">
         <div className="order-1 lg:order-3 w-full lg:max-w-xs">
           <h2 className="text-2xl font-semibold mb-2">Join our newsletter</h2>
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    )
+  )
 }
 
 export default Footer;

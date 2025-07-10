@@ -23,3 +23,5 @@ Footer - 36mins active coding
 Fixing layout - 14mins
 
 8.7. 2h
+10.7. 2h
+11.7. 2h

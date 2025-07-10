@@ -1,6 +1,7 @@
 // CollectionSection.tsx
 import Image from 'next/image';
 import { Product } from './types'; // adjust path accordingly
+import { useRouter } from "next/navigation";
 
 interface Props {
     products: Product[] | null;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function CollectionSection({ products, maxItems }: Props) {
+    const router = useRouter();
+
     if (!products) return <p>Loading...</p>;
 
     const displayProducts = maxItems ? products.slice(0, maxItems) : products;
@@ -22,6 +25,7 @@ export default function CollectionSection({ products, maxItems }: Props) {
                             alt={product.product}
                             fill
                             className="object-cover"
+                            onClick={() => router.push(`shop//product/${product.id}`)}
                         />
                     </div>
                     <h3 className="mt-4 text-[16px]">

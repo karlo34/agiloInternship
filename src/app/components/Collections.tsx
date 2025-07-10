@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 import { Product } from './types';
 
 interface Props {
@@ -6,6 +7,9 @@ interface Props {
 }
 
 export default function Collection({ products }: Props) {
+
+    const router = useRouter();
+
     if (!products) return <p>Loading...</p>;
 
     return (
@@ -19,6 +23,7 @@ export default function Collection({ products }: Props) {
                             alt={product.product}
                             fill
                             className="object-cover"
+                            onClick={() => router.push(`shop//product/${product.id}`)}
                         />
                     </div>
                     <div className='hidden sm:block'>
@@ -31,8 +36,8 @@ export default function Collection({ products }: Props) {
                     <div className='block sm:hidden mt-3'>
                         {
                             product.discount ? (
-                                
-                                 <div>
+
+                                <div>
                                     <h3 className="text-xs font-semibold truncate">{product.product}</h3>
                                     <div className="flex justify-between items-center">
                                         <p className="text-xs font-semibold text-red-500">{product.discount}€</p>
@@ -40,7 +45,7 @@ export default function Collection({ products }: Props) {
                                     </div>
                                 </div>
                             ) : (
-                               <div>
+                                <div>
                                     <h3 className="text-xs font-medium truncate">{product.product}</h3>
                                     <div className="flex justify-between">
                                         <p className="text-xs font-semibold">{product.price}€</p>
