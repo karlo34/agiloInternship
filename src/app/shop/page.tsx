@@ -29,7 +29,7 @@ const Shop = () => {
             <div className="mx-[6%]">
                 <Navbar />
                 <div className="flex items-center justify-between mb-8">
-                    <h1 className="text-3xl md:text-4xl font-semibold text-black">
+                    <h1 className="text-3xl md:text-4xl font-semibold">
                         Collections
                     </h1>
                     <div className="hidden sm:flex gap-2">
@@ -49,46 +49,35 @@ const Shop = () => {
                         <CollectionSection products={products ?? []} maxItems={4} />
                     )
                 }
-                <h1>Shop</h1>
-                <div className="flex relative items-center gap-6 text-sm">
-                    <div className="hidden sm:flex relative">
-                        <select
-                            id="country"
-                            className="pr-6 appearance-none bg-transparent text-sm font-medium focus:outline-none cursor-pointer">
-                            <option value="">Collection</option>
-                            <option value="en">EN</option>
-                            <option value="dk">DK</option>
-                            <option value="de">DE</option>
-                            <option value="de">DE</option>
-                        </select>
-                        <ChevronDown className="pointer-events-none absolute right-1 top-1/2 h-4 w-4 -translate-y-1/2" />
-                    </div>
-                    <div className="hidden sm:flex relative">
-                        <select
-                            id="country"
-                            className="pr-6 appearance-none bg-transparent text-sm font-medium focus:outline-none cursor-pointer">
-                            <option value="hr">HR</option>
-                            <option value="en">EN</option>
-                            <option value="dk">DK</option>
-                            <option value="de">DE</option>
-                        </select>
-                        <ChevronDown className="pointer-events-none absolute right-1 top-1/2 h-4 w-4 -translate-y-1/2" />
-                    </div>
-                    <div className="hidden sm:flex relative">
-                        <select
-                            id="country"
-                            className="pr-6 appearance-none bg-transparent text-sm font-medium focus:outline-none cursor-pointer">
-                            <option value="hr">HR</option>
-                            <option value="en">EN</option>
-                            <option value="dk">DK</option>
-                            <option value="de">DE</option>
-                        </select>
-                        <ChevronDown className="pointer-events-none absolute right-1 top-1/2 h-4 w-4 -translate-y-1/2" />
-                    </div>
+                <h1 className="text-3xl md:text-4xl font-semibold mt-30 mb-10">Shop</h1>
+
+                <div className="flex flex-wrap gap-4 mb-8 text-sm">
+                    <select className="hidden sm:block p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white shadow-sm justify-around text-center">
+                        <option value="">Collection</option>
+                        <option value="Scandinavian Simplicity">Scandinavian Simplicity</option>
+                        <option value="Modern Luxe">Modern Luxe</option>
+                        <option value="Boho Chic">Boho Chic</option>
+                        <option value="Timeless Classic">Timeless Classic</option>
+                    </select>
+                    <select className="hidden sm:block p-2 border rounded-md w-[133px] bg-white shadow-sm text-center">
+                        <option value="">Category</option>
+                        <option value="Sofa">Sofa</option>
+                        <option value="Armchair">Armchair</option>
+                    </select>
+                    <select className="hidden sm:block p-2 border rounded-md w-[99px] bg-white shadow-sm text-center">
+                        <option value="">Type</option>
+                        <option value="2-seater">2-Seater</option>
+                        <option value="3-seater">3-Seater</option>
+                    </select>
+                    <select className="p-2 border rounded-md bg-white shadow-sm ml-auto text-center">
+                        <option value="new">Sort by: Newest</option>
+                        <option value="priceLowHigh">Price: Low to High</option>
+                        <option value="priceHighLow">Price: High to Low</option>
+                    </select>
                 </div>
                 {
                     products && (
-                        <Collections products={products ?? []} />
+                        <Collections products={products?.slice(4) ?? []} />
                     )
                 }
             </div>
