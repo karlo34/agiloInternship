@@ -38,10 +38,11 @@ export default function Collection({ products }: Props) {
                             product.discount ? (
 
                                 <div>
+                                    <h1>{typeof(product.discount)}</h1>
                                     <h3 className="text-xs font-semibold truncate">{product.product}</h3>
                                     <div className="flex justify-between items-center">
                                         <p className="text-xs font-semibold text-red-500">{product.discount}€</p>
-                                        <p className="text-xs text-gray-500 font-semibold line-through">{product.price}€</p>
+                                        <p className="text-xs text-gray-500 font-normal line-through">{product.price}€</p>
                                     </div>
                                 </div>
                             ) : (

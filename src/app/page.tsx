@@ -6,7 +6,7 @@ export default function Home() {
     <div className="flex flex-col w-full">
       <div className="mx-[6%]">
         <Navbar />
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center min-h-[30vh]">
           <h1>Home page</h1>
         </div>
       </div>
