@@ -154,5 +154,102 @@
     "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
     "price": 3000,
     "discount": 2000
+  },
+
+
+  
+  {
+    "id": 18,
+    "collection": "Modern Luxe",
+    "product": "Sutton Royale",
+    "img": "/slike/Sutton_Royale.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": 2500
+  },
+  {
+    "id": 19,
+    "collection": "Scandinavian Simplicity",
+    "product": "Everly Estate",
+    "img": "/slike/Everly Estate.jpg",
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Everly Estate features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": 3000
+  },
+  {
+    "id": 20,
+    "collection": "Modern Luxe",
+    "product": "Serena Meadow",
+    "img": "/slike/Serena_Meadow.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Serena Meadow combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": 2000
+  },
+  {
+    "id": 21,
+    "collection": "Modern Luxe",
+    "product": "Velora Luxe",
+    "img": "/slike/Velora_Luxe.png",
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Astrid Curve features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": 1800,
+    "discount": 1200
+  },
+  {
+    "id": 22,
+    "collection": "Scandinavian Simplicity",
+    "product": "Oslo Drift",
+    "img": "/slike/Oslo_Drift.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": 3000,
+    "discount": 2000
+  },
+  {
+    "id": 23,
+    "collection": "Modern Luxe",
+    "product": "Sutton Royale",
+    "img": "/slike/Sutton_Royale.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": 2500
+  },
+  {
+    "id": 24,
+    "collection": "Scandinavian Simplicity",
+    "product": "Everly Estate",
+    "img": "/slike/Everly Estate.jpg",
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Everly Estate features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": 3000
+  },
+  {
+    "id": 25,
+    "collection": "Modern Luxe",
+    "product": "Serena Meadow",
+    "img": "/slike/Serena_Meadow.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Serena Meadow combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": 2000
+  },
+  {
+    "id": 26,
+    "collection": "Modern Luxe",
+    "product": "Velora Luxe",
+    "img": "/slike/Velora_Luxe.png",
+    "breefly": "Soft curves and minimalist form blend art and comfort",
+    "description": "Astrid Curve features smooth lines and modern simplicity. Designed to complement minimalist and Scandinavian-inspired interiors with elegance and ease.",
+    "price": 1800,
+    "discount": 1200
+  },
+  {
+    "id": 27,
+    "collection": "Scandinavian Simplicity",
+    "product": "Oslo Drift",
+    "img": "/slike/Oslo_Drift.jpg",
+    "breefly": "Bold elegance with contemporary edge",
+    "description": "Paloma Haven combines statement design with cozy comfort. Ideal for modern living spaces that crave a fresh yet elegant look.",
+    "price": 3000,
+    "discount": 2000
   }
 ]
