@@ -53,7 +53,6 @@ const Shop = () => {
 
                 <div className="flex flex-wrap gap-4 mb-8 text-sm">
                     <div className="relative sm:hidden">
-                        {/* The custom select dropdown */}
                         <select className="block sm:hidden p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white shadow-sm text-center pr-8 appearance-none">
                             <option value="">Filter</option>
                             <option value="new">Sort by: Newest</option>
