@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import CollectionSection from "../components/CollectionSection";
 import Collections from "../components/Collections";
 import { ChevronDown } from "lucide-react";
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Product } from '../components/types';
 
@@ -52,6 +52,21 @@ const Shop = () => {
                 <h1 className="text-3xl md:text-4xl font-semibold mt-30 mb-10">Shop</h1>
 
                 <div className="flex flex-wrap gap-4 mb-8 text-sm">
+                    <div className="relative sm:hidden">
+                        {/* The custom select dropdown */}
+                        <select className="block sm:hidden p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white shadow-sm text-center pr-8 appearance-none">
+                            <option value="">Filter</option>
+                            <option value="new">Sort by: Newest</option>
+                            <option value="old">Sort by: Oldest</option>
+                            <option value="priceLowHigh">Price: Low to High</option>
+                            <option value="priceHighLow">Price: High to Low</option>
+                        </select>
+
+                        {/* Custom plus icon positioned over the select */}
+                        <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                            <Plus />
+                        </div>
+                    </div>
                     <select className="hidden sm:block p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white shadow-sm justify-around text-center">
                         <option value="">Collection</option>
                         <option value="Scandinavian Simplicity">Scandinavian Simplicity</option>

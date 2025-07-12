@@ -111,7 +111,7 @@ export default function Collection({ products }: Props) {
                 {currentPage > 1 && (
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
-                        className="px-3 py-1 rounded-md text-gray-500 hover:bg-gray-200"
+                        className="px-3 py-1 rounded-md text-gray-500"
                     >
                         {currentPage - 1}
                     </button>
@@ -119,7 +119,7 @@ export default function Collection({ products }: Props) {
 
                 {/* Current Page Number */}
                 <button
-                    className="px-3 py-1 rounded-md font-semibold text-blue-500 bg-blue-100"
+                    className="px-3 py-1 rounded-md font-semibold"
                 >
                     {currentPage}
                 </button>
@@ -128,7 +128,7 @@ export default function Collection({ products }: Props) {
                 {currentPage < totalPages && (
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
-                        className="px-3 py-1 rounded-md text-gray-500 hover:bg-gray-200"
+                        className="px-3 py-1 rounded-md text-gray-500"
                     >
                         {currentPage + 1}
                     </button>

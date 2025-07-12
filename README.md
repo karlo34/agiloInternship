@@ -25,3 +25,4 @@ Fixing layout - 14mins
 8.7. 2h
 10.7. 2h
 11.7. 2h
+12.7. 1h 45mins

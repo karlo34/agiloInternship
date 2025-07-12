@@ -25,7 +25,7 @@ export default function CollectionSection({ products, maxItems }: Props) {
                             alt={product.product}
                             fill
                             className="object-cover"
-                            onClick={() => router.push(`shop//product/${product.id}`)}
+                            onClick={() => router.push(`shop/product/${product.id}`)}
                         />
                     </div>
                     <h3 className="mt-4 text-[16px]">
