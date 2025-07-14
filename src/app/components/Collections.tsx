@@ -87,8 +87,8 @@ export default function Collection({ products }: Props) {
                                 {(product.discount ?? 0) > 0 ? (
                                     <div>
                                         <h3 className="text-xs font-semibold truncate">{product.product}</h3>
-                                        <div className="flex justify-between items-center">
-                                            <p className="text-xs font-semibold text-customOrange">{product.discount}€</p>
+                                        <div className="mt-5 flex justify-between items-center">
+                                            <p className="text-xs font-semibold text-[#DF4718]">{product.discount}€</p>
                                             <p className="text-xs text-gray-500 font-semibold line-through">{product.price}€</p>
                                         </div>
                                     </div>

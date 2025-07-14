@@ -3,9 +3,13 @@
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ProductDisplay from '@/app/components/ProductDisplay';  // Importing ProductDisplay component
+import Image from 'next/image';
 import { Product } from '@/app/components/types';
+
 import Navbar from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
+import DownProductSection from '@/app/components/DownProductSection';
+import RelatedProducts from '@/app/components/RelatedProduxts';
 
 const ProductDetails = () => {
     const { id: idParam } = useParams();
@@ -54,10 +58,28 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <div className='mx-[6%]'>
+            <div className='flex flex-col items-center'>
                 <Navbar />
-                {product ? <ProductDisplay product={product} quantity={1} increaseQuantity={() => { }} decreaseQuantity={() => { }} /> : <p>Product not found</p>}
+                <div className='mx-[6%]'>
+                   
+                    {product ? <ProductDisplay product={product} quantity={1} increaseQuantity={() => { }} decreaseQuantity={() => { }} /> : <p>Product not found</p>}
+                </div>
+                <div className="w-full overflow-hidden">
+                    <Image
+                        src="/slike/details_img.png"
+                        alt="Hero"
+                        layout="responsive"
+                        width={1404}
+                        height={809}
+                        className="object-cover"
+                    />
+                </div>
+                <DownProductSection />
+                <div className="mx-[6%]">
+                    <RelatedProducts />
+                </div>
             </div>
+
             <Footer />
         </div>
     );

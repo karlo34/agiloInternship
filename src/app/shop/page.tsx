@@ -3,7 +3,6 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import CollectionSection from "../components/CollectionSection";
 import Collections from "../components/Collections";
-import { ChevronDown } from "lucide-react";
 import { ArrowLeftIcon, ArrowRightIcon, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Product } from '../components/types';
