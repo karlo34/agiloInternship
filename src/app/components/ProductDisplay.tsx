@@ -14,7 +14,7 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
             <div className="relative w-full sm:w-1/2 h-[495px] flex-shrink-0 overflow-hidden">
                 {/* Left Arrow Button */}
                 <button
-                    className="group flex items-center justify-center w-10 h-10 border border-black hover:cursor-pointer hover:bg-black rounded-full absolute left-5 top-1/2 transform -translate-y-1/2 z-10"
+                    className="group hidden sm:flex items-center justify-center w-10 h-10 border border-black hover:cursor-pointer hover:bg-black rounded-full absolute left-5 top-1/2 transform -translate-y-1/2 z-10"
                 >
                     <ArrowLeftIcon className="w-5 h-5 text-black group-hover:text-white" />
                 </button>
@@ -41,7 +41,7 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
 
                 {/* Right Arrow Button */}
                 <button
-                    className="group flex items-center justify-center w-10 h-10 border border-black hover:cursor-pointer hover:bg-black rounded-full absolute right-5 top-1/2 transform -translate-y-1/2"
+                    className="group hidden sm:flex items-center justify-center w-10 h-10 border border-black hover:cursor-pointer hover:bg-black rounded-full absolute right-5 top-1/2 transform -translate-y-1/2"
                 >
                     <ArrowRightIcon className="w-5 h-5 text-black group-hover:text-white" />
                 </button>
@@ -73,7 +73,7 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
                             <label className="font-medium pl-5 text-gray-500">Linen</label>
                         </div>
                         <div className="relative flex items-center">
-                            <select className="mt-2 p-2 h-12 w-[243px] border border-gray-200 rounded-md appearance-none pl-3 pr-10">
+                            <select className="mt-2 p-2 h-12 sm:w-[243px] w-full border border-gray-200 rounded-md appearance-none pl-3 pr-10">
                                 <option value="Linen">Linen</option>
                                 <option value="Cotton">Cotton</option>
                             </select>
@@ -92,8 +92,8 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center space-x-4 mt-6">
-                    <div className="flex items-center border rounded-sm border-gray-200">
+                <div className="flex sm:flex-row flex-col items-center justify-center space-x-4 mt-6">
+                    <div className="flex items-center border rounded-sm border-gray-200 pl-3 w-full sm:mb-0 mb-5">
                         <button
                             onClick={decreaseQuantity}
                             disabled={quantity === 1}
