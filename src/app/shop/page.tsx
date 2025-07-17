@@ -3,7 +3,7 @@ import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import CollectionSection from "../components/CollectionSection";
 import Collections from "../components/Collections";
-import { ArrowLeftIcon, ArrowRightIcon, Plus } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon, ChevronDown, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Product } from '../components/types';
 
@@ -27,7 +27,7 @@ const Shop = () => {
         <div className="min-h-[100vh]">
             <Navbar />
             <div className="mx-[6%]">
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center justify-between mb-8 mt-10">
                     <h1 className="text-3xl md:text-4xl font-semibold">
                         Collections
                     </h1>
@@ -50,45 +50,59 @@ const Shop = () => {
                 }
                 <h1 className="text-3xl md:text-4xl font-semibold mt-30 mb-10">Shop</h1>
 
-                <div className="flex flex-wrap gap-4 mb-8 text-sm">
-                    <div className="relative sm:hidden">
-                        <select className="block sm:hidden p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white shadow-sm text-center pr-8 appearance-none">
-                            <option value="">Filter</option>
+                <div className="flex flex-wrap justify-between gap-4 mb-8 text-sm">
+                    <div className="flex flex-wrap gap-4">
+                        <div className="relative sm:hidden">
+                            <select className="block sm:hidden p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white text-center pr-8 appearance-none">
+                                <option value="">Filter</option>
+                                <option value="new">Sort by: Newest</option>
+                                <option value="old">Sort by: Oldest</option>
+                                <option value="priceLowHigh">Price: Low to High</option>
+                                <option value="priceHighLow">Price: High to Low</option>
+                            </select>
+                            {/* Custom plus icon positioned over the select */}
+                            <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                <Plus className="h-5 w-5 text-gray-500" />
+                            </div>
+                        </div>
+                        <div className="relative sm:inline-block hidden">
+                            <select
+                                className="appearance-none sm:block p-2 border rounded-sm h-[40px] w-[140px] bg-white text-center pr-8 focus:outline-none border-gray-200">
+                                <option value="">Collection</option>
+                                <option value="Scandinavian Simplicity">Scandinavian Simplicity</option>
+                                <option value="Modern Luxe">Modern Luxe</option>
+                                <option value="Boho Chic">Boho Chic</option>
+                                <option value="Timeless Classic">Timeless Classic</option>
+                            </select>
+                            <ChevronDown className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-gray-500 w-6 h-6" />
+                        </div>
+                        <div className="relative sm:inline-block hidden">
+                            <select className="appearance-none sm:block p-2 border rounded-sm w-[133px] bg-white text-center pr-8 focus:outline-none border-gray-200">
+                                <option value="">Category</option>
+                                <option value="Sofa">Sofa</option>
+                                <option value="Armchair">Armchair</option>
+                            </select>
+                            <ChevronDown className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-gray-500 w-6 h-6" />
+                        </div>
+                        <div className="relative sm:inline-block hidden">
+                            <select className="appearance-none sm:block p-2 border rounded-sm w-[99px] bg-white text-center pr-8 focus:outline-none border-gray-200">
+                                <option value="">Type</option>
+                                <option value="2-seater">2-Seater</option>
+                                <option value="3-seater">3-Seater</option>
+                            </select>
+                            <ChevronDown className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-gray-500 w-6 h-6" />
+                        </div>
+                    </div>
+                    <div className="relative sm:inline-block hidden">
+                        <select className="appearance-none p-2 border rounded-md bg-white ml-auto text-center border-gray-200">
+                            <option value="">Sort by</option>
                             <option value="new">Sort by: Newest</option>
                             <option value="old">Sort by: Oldest</option>
                             <option value="priceLowHigh">Price: Low to High</option>
                             <option value="priceHighLow">Price: High to Low</option>
                         </select>
-
-                        {/* Custom plus icon positioned over the select */}
-                        <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-                            <Plus />
-                        </div>
+                        <ChevronDown className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-gray-500 w-6 h-6" />
                     </div>
-                    <select className="hidden sm:block p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white shadow-sm justify-around text-center">
-                        <option value="">Collection</option>
-                        <option value="Scandinavian Simplicity">Scandinavian Simplicity</option>
-                        <option value="Modern Luxe">Modern Luxe</option>
-                        <option value="Boho Chic">Boho Chic</option>
-                        <option value="Timeless Classic">Timeless Classic</option>
-                    </select>
-                    <select className="hidden sm:block p-2 border rounded-md w-[133px] bg-white shadow-sm text-center">
-                        <option value="">Category</option>
-                        <option value="Sofa">Sofa</option>
-                        <option value="Armchair">Armchair</option>
-                    </select>
-                    <select className="hidden sm:block p-2 border rounded-md w-[99px] bg-white shadow-sm text-center">
-                        <option value="">Type</option>
-                        <option value="2-seater">2-Seater</option>
-                        <option value="3-seater">3-Seater</option>
-                    </select>
-                    <select className="p-2 border rounded-md bg-white shadow-sm ml-auto text-center">
-                        <option value="">Sort by</option>
-                        <option value="new">Sort by: Newest</option>
-                        <option value="old">Sort by: Oldest</option>
-                        <option value="priceLowHigh">Price: Low to High</option>
-                        <option value="priceHighLow">Price: High to Low</option>
-                    </select>
                 </div>
                 {
                     products && (
