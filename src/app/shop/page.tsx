@@ -25,8 +25,8 @@ const Shop = () => {
     }, []);
     return (
         <div className="min-h-[100vh]">
+            <Navbar />
             <div className="mx-[6%]">
-                <Navbar />
                 <div className="flex items-center justify-between mb-8">
                     <h1 className="text-3xl md:text-4xl font-semibold">
                         Collections

@@ -64,13 +64,13 @@ export default function Collection({ products }: Props) {
                     return (
                         <div key={product.id} className="flex flex-col w-full">
                             {/* Image */}
-                            <div className="relative overflow-hidden h-[180px] sm:h-[250px] w-full rounded-md shadow-sm">
+                            <div className="relative overflow-hidden h-[180px] sm:h-[250px] w-full">
                                 <Image
                                     src={product.img}
                                     alt={product.product}
                                     fill
                                     className="object-cover"
-                                    onClick={() => router.push(`shop//product/${product.id}`)}
+                                    onClick={() => router.push(`shop/product/${product.id}`)}
                                 />
                             </div>
 
@@ -79,7 +79,7 @@ export default function Collection({ products }: Props) {
                                     <h3 className="text-sm font-medium truncate">{product.product}</h3>
                                     <p className="text-sm font-semibold">{product.price}€</p>
                                 </div>
-                                <p className="text-xs text-gray-500">{product.collection}</p>
+                                <p className="text-xs text-gray-500 pt-1">{product.collection}</p>
                             </div>
 
                             {/* Mobile View (sm:hidden) */}

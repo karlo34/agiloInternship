@@ -63,16 +63,25 @@ const ProductDetails = () => {
                 <div className='mx-[6%]'>
                     {product ? <ProductDisplay product={product} quantity={1} increaseQuantity={() => { }} decreaseQuantity={() => { }} /> : <p>Product not found</p>}
                 </div>
-                <div className="w-full overflow-hidden">
+                <div className="overflow-hidden mx-[6%] w-[88%] mt-25">
+                    <h1 className='sm:text-5xl text-2xl sm:font-medium font-normal mb-7'>Collection Inspired Interior</h1>
                     <Image
-                        src="/slike/details_img.png"
+                        src="/slike/product_img.png"
                         alt="Hero"
                         layout="responsive"
-                        width={1404}
-                        height={809}
+                        width={1248}
+                        height={702}
                         className="object-cover"
                     />
                 </div>
+                <Image
+                    src="/slike/details_img.png"
+                    alt="Hero"
+                    layout="responsive"
+                    width={1404}
+                    height={809}
+                    className="object-cover sm:px-0 px-[6%] mt-10"
+                />
                 <DownProductSection />
 
             </div>

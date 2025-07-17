@@ -28,10 +28,10 @@ export default function CollectionSection({ products, maxItems }: Props) {
                             onClick={() => router.push(`shop/product/${product.id}`)}
                         />
                     </div>
-                    <h3 className="mt-4 text-[16px]">
+                    <h3 className="mt-4 text-base font-normal">
                         {product.product}
                     </h3>
-                    <p className="block sm:hidden text-sm text-gray-500">
+                    <p className="block sm:hidden text-xs text-gray-500">
                         {product.breefly}
                     </p>
                 </div>
