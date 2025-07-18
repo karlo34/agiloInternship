@@ -1,5 +1,6 @@
 // ProductDisplay.tsx
 import { ArrowLeftIcon, ArrowRightIcon, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity }: {
@@ -8,8 +9,10 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
     increaseQuantity: () => void;
     decreaseQuantity: () => void;
 }) => {
+    const [material, setMaterial] = useState('Linen');
+    const [selectedColor, setSelectedColor] = useState('Dark Gray');
     return (
-        <div className="flex flex-col lg:flex-row lg:space-x-10 mt-10">
+        <div className="flex flex-col lg:flex-row lg:space-x-10 mt-10 sm:mx-[6%] mx-0">
             {/* Image Section */}
             <div className="relative w-full sm:w-1/2 h-[495px] flex-shrink-0 overflow-hidden">
                 {/* Left Arrow Button */}
@@ -55,7 +58,7 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
 
 
             {/* Product Details Section */}
-            <div className="flex flex-col mt-6 lg:mt-0 w-full lg:w-[40%]">
+            <div className="flex flex-col mt-6 lg:mt-0 w-full lg:w-[40%] sm:px-0 px-5">
                 <p className="text-sm text-gray-500">{product.collection}</p>
                 <h1 className="text-3xl font-semibold my-3">{product.product}</h1>
                 {/* Price Section */}
@@ -65,15 +68,19 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
                     ) : null}
                     <p className="text-2xl font-bold">{product.discount ? product.discount : product.price}€</p>
                 </div>
-                <p className="text-sm mt-3">{product.description}</p>
+                <p className="text-sm mt-3 sm:text-[#050505] text-gray-500">{product.description}</p>
                 <div className="mt-5">
                     <div className="flex flex-col space-y-2">
                         <div>
                             <label className="font-medium">Materials</label>
-                            <label className="font-medium pl-5 text-gray-500">Linen</label>
+                            <label className="font-medium pl-5 text-gray-500">{material}</label>
                         </div>
                         <div className="relative flex items-center">
-                            <select className="mt-2 p-2 h-12 sm:w-[243px] w-full border border-gray-200 rounded-md appearance-none pl-3 pr-10">
+                            <select
+                                value={material}
+                                onChange={(e) => setMaterial(e.target.value)}
+                                className="mt-2 p-2 h-12 sm:w-[243px] w-full border border-gray-200 rounded-md appearance-none pl-3 pr-10"
+                            >
                                 <option value="Linen">Linen</option>
                                 <option value="Cotton">Cotton</option>
                             </select>
@@ -84,11 +91,23 @@ const ProductDisplay = ({ product, quantity, increaseQuantity, decreaseQuantity 
                     </div>
                     <div className="mt-5">
                         <label className="font-medium">Colors</label>
-                        <label className="pl-3 text-gray-500">Dark Gray</label>
+                        <label className="pl-3 text-gray-500">{selectedColor}</label>
                         <div className="flex space-x-3 mt-2">
-                            <button className="w-8 h-8 bg-gray-400"></button>
-                            <button className="w-8 h-8 bg-black"></button>
-                            <button className="w-8 h-8 bg-[#E8E8E8] border-gray-300"></button>
+                            <button
+                                className={`w-8 h-8 bg-gray-400 relative ${selectedColor === 'Dark Gray' ? 'underline-active' : ''}`}
+                                onClick={() => setSelectedColor('Dark Gray')}
+                            >
+                            </button>
+                            <button
+                                className={`w-8 h-8 bg-black relative ${selectedColor === 'Black' ? 'underline-active' : ''}`}
+                                onClick={() => setSelectedColor('Black')}
+                            >
+                            </button>
+                            <button
+                                className={`w-8 h-8 bg-[#E8E8E8] border-gray-300 relative ${selectedColor === 'Light Gray' ? 'underline-active' : ''}`}
+                                onClick={() => setSelectedColor('Light Gray')}
+                            >
+                            </button>
                         </div>
                     </div>
                 </div>
