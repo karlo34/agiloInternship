@@ -53,3 +53,14 @@ body {
     height: 1.5px; /* Adjust thickness of the underline */
     background-color: #050505; /* Color of the underline */
 }
+
+.page-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; /* Adjust this to move the underline down */
+    left: 1px;
+    width: 120%;
+    height: 1.5px; /* Adjust thickness of the underline */
+    background-color: #050505; /* Color of the underline */
+}
+
