@@ -28,7 +28,7 @@ const Shop = () => {
             <Navbar />
             <div className="mx-[6%]">
                 <div className="flex items-center justify-between mb-8 mt-10">
-                    <h1 className="text-3xl md:text-4xl font-semibold">
+                    <h1 className="sm:text-5xl sm:font-medium font-normal text-2xl">
                         Collections
                     </h1>
                     <div className="hidden sm:flex gap-2">
@@ -48,12 +48,12 @@ const Shop = () => {
                         <CollectionSection products={products ?? []} maxItems={4} />
                     )
                 }
-                <h1 className="text-3xl md:text-4xl font-semibold mt-30 mb-10">Shop</h1>
+                <h1 className="text-2xl md:text-5xl font-normal sm:font-medium mt-30 mb-10">Shop</h1>
 
                 <div className="flex flex-wrap justify-between gap-4 mb-8 text-sm">
                     <div className="flex flex-wrap gap-4">
                         <div className="relative sm:hidden">
-                            <select className="block sm:hidden p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white text-center pr-8 appearance-none">
+                            <select className="block sm:hidden p-2 border items-center rounded-sm h-[40px] w-[140px] bg-white text-center pr-8 appearance-none border-gray-200">
                                 <option value="">Filter</option>
                                 <option value="new">Sort by: Newest</option>
                                 <option value="old">Sort by: Oldest</option>
@@ -93,8 +93,8 @@ const Shop = () => {
                             <ChevronDown className="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-gray-500 w-6 h-6" />
                         </div>
                     </div>
-                    <div className="relative sm:inline-block hidden">
-                        <select className="appearance-none p-2 border rounded-md bg-white ml-auto text-center border-gray-200">
+                    <div className="relative">
+                        <select className="appearance-none sm:block p-2 border rounded-sm bg-white text-center pr-8 focus:outline-none border-gray-200">
                             <option value="">Sort by</option>
                             <option value="new">Sort by: Newest</option>
                             <option value="old">Sort by: Oldest</option>

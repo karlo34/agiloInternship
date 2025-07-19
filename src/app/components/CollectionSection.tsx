@@ -24,7 +24,6 @@ export default function CollectionSection({ products, maxItems }: Props) {
                         className="flex flex-col w-[292px]"
                     >
                         <div className="relative overflow-hidden sm:h-[390px] sm:w-[292px] h-[343px] w-[240px]">
-                            {/* 240 343 */}
                             {/* ← Paste the dynamic className here */}
                             <Image
                                 src={product.img}
@@ -44,7 +43,7 @@ export default function CollectionSection({ products, maxItems }: Props) {
                         <h3 className="mt-4 text-base font-normal">
                             {product.product}
                         </h3>
-                        <p className="block sm:hidden text-xs text-gray-500">
+                        <p className="block sm:hidden text-xs font-normal text-gray-500">
                             {product.breefly}
                         </p>
                     </div>

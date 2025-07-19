@@ -69,34 +69,34 @@ export default function Collection({ products }: Props) {
                                     src={product.img}
                                     alt={product.product}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover sm:w-[384px] sm:h-[284px] w-[163px] h-[163px]"
                                     onClick={() => router.push(`shop/product/${product.id}`)}
                                 />
                             </div>
 
                             <div className='hidden sm:block'>
                                 <div className="flex justify-between items-center mt-5">
-                                    <h3 className="text-sm font-medium truncate">{product.product}</h3>
-                                    <p className="text-sm font-semibold">{product.price}€</p>
+                                    <h3 className="sm:text-base text-xs font-normal truncate">{product.product}</h3>
+                                    <p className="sm:text-base text-xs font-semibold">{product.price}€</p>
                                 </div>
-                                <p className="text-xs text-gray-500 pt-1">{product.collection}</p>
+                                <p className="text-xs font-normal text-gray-500 pt-1">{product.collection}</p>
                             </div>
 
                             {/* Mobile View (sm:hidden) */}
                             <div className='block sm:hidden mt-3'>
                                 {(product.discount ?? 0) > 0 ? (
                                     <div>
-                                        <h3 className="text-xs font-semibold truncate">{product.product}</h3>
-                                        <div className="mt-5 flex justify-between items-center">
+                                        <h3 className="sm:text-base text-xs font-normal truncate">{product.product}</h3>
+                                        <div className="mt-1 flex justify-between items-center">
                                             <p className="text-xs font-semibold text-[#DF4718]">{product.discount}€</p>
-                                            <p className="text-xs text-gray-500 font-semibold line-through">{product.price}€</p>
+                                            <p className="text-xs font-normal text-gray-500 line-through">{product.price}€</p>
                                         </div>
                                     </div>
                                 ) : (
                                     <div>
                                         {/* No discount, regular price */}
-                                        <h3 className="text-xs font-medium truncate">{product.product}</h3>
-                                        <p className="text-xs font-semibold">{product.price}€</p>
+                                        <h3 className="text-xs font-normal truncate">{product.product}</h3>
+                                        <p className="mt-1 text-xs font-semibold">{product.price}€</p>
                                     </div>
                                 )}
                             </div>
@@ -111,7 +111,7 @@ export default function Collection({ products }: Props) {
                 {currentPage > 1 && (
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
-                        className="px-3 py-1 rounded-md text-gray-500"
+                        className="px-3 py-1 text-gray-500 text-base font-normal"
                     >
                         {currentPage - 1}
                     </button>
@@ -119,7 +119,7 @@ export default function Collection({ products }: Props) {
 
                 {/* Current Page Number */}
                 <button
-                    className="px-3 py-1 rounded-md font-semibold"
+                    className="px-3 py-1 text-base font-normal"
                 >
                     {currentPage}
                 </button>
@@ -128,7 +128,7 @@ export default function Collection({ products }: Props) {
                 {currentPage < totalPages && (
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
-                        className="px-3 py-1 rounded-md text-gray-500"
+                        className="px-3 py-1 text-gray-500 text-base font-normal"
                     >
                         {currentPage + 1}
                     </button>
