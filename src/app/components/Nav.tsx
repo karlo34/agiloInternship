@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
         <nav className="mb-[0px] pt-[31px] sm:mb-[106px] px-10 sm:px-[6%] flex flex-wrap items-center justify-between relative w-full">
-            <h1 className="text-2xl font-semibold whitespace-nowrap">
+            <h1 className="text-2xl title whitespace-nowrap">
                 <Link href="/">SofaSocietyCo.</Link>
             </h1>
             
@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className="hidden sm:flex relative">
                     <select
                         id="country"
-                        className="pr-6 appearance-none bg-transparent text-sm font-medium focus:outline-none cursor-pointer">
+                        className="pr-6 appearance-none bg-transparent text-sm small focus:outline-none cursor-pointer">
                         <option value="hr">HR</option>
                         <option value="en">EN</option>
                         <option value="dk">DK</option>

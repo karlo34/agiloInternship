@@ -76,27 +76,27 @@ export default function Collection({ products }: Props) {
 
                             <div className='hidden sm:block'>
                                 <div className="flex justify-between items-center mt-5">
-                                    <h3 className="sm:text-base text-xs font-normal truncate">{product.product}</h3>
-                                    <p className="sm:text-base text-xs font-semibold">{product.price}€</p>
+                                    <h3 className="sm:text-base text-xs small-body sm:small truncate">{product.product}</h3>
+                                    <p className="sm:text-base text-xs bold-small-body sm:bold-body">{product.price}€</p>
                                 </div>
-                                <p className="text-xs font-normal text-gray-500 pt-1">{product.collection}</p>
+                                <p className="text-xs small-body text-gray-500 pt-1">{product.collection}</p>
                             </div>
 
                             {/* Mobile View (sm:hidden) */}
                             <div className='block sm:hidden mt-3'>
                                 {(product.discount ?? 0) > 0 ? (
                                     <div>
-                                        <h3 className="sm:text-base text-xs font-normal truncate">{product.product}</h3>
+                                        <h3 className="sm:text-base text-xs  small-body sm:small truncate">{product.product}</h3>
                                         <div className="mt-1 flex justify-between items-center">
                                             <p className="text-xs font-semibold text-[#DF4718]">{product.discount}€</p>
-                                            <p className="text-xs font-normal text-gray-500 line-through">{product.price}€</p>
+                                            <p className="text-xs bold-small-body sm:bold-body text-gray-500 line-through">{product.price}€</p>
                                         </div>
                                     </div>
                                 ) : (
                                     <div>
                                         {/* No discount, regular price */}
-                                        <h3 className="text-xs font-normal truncate">{product.product}</h3>
-                                        <p className="mt-1 text-xs font-semibold">{product.price}€</p>
+                                        <h3 className="text-xs small-body sm:small truncate">{product.product}</h3>
+                                        <p className="mt-1 text-xs bold-small-body sm:bold-body">{product.price}€</p>
                                     </div>
                                 )}
                             </div>
@@ -111,7 +111,7 @@ export default function Collection({ products }: Props) {
                 {currentPage > 1 && (
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
-                        className="px-3 py-1 text-gray-500 text-base font-normal"
+                        className="px-3 py-1 text-gray-500 text-base"
                     >
                         {currentPage - 1}
                     </button>
@@ -119,7 +119,7 @@ export default function Collection({ products }: Props) {
 
                 {/* Current Page Number */}
                 <button
-                    className="px-3 py-1 text-base font-normal"
+                    className="px-3 py-1 text-base"
                 >
                     {currentPage}
                 </button>
@@ -128,7 +128,7 @@ export default function Collection({ products }: Props) {
                 {currentPage < totalPages && (
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
-                        className="px-3 py-1 text-gray-500 text-base font-normal"
+                        className="px-3 py-1 text-gray-500 text-base"
                     >
                         {currentPage + 1}
                     </button>

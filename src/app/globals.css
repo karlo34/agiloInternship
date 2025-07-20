@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://cdn.jsdelivr.net/npm/mona-sans@1.0.0/css/mona-sans.min.css');
 
 :root {
   --background: #FDFDFD;
@@ -22,27 +21,75 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  /* font-family: Arial, Helvetica, sans-serif; */
-   font-family: var(--font-family-base);
+
+/* @font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Mona Sans Body';
+  src: url('/fonts/MonaSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Mona Sans';
-  src:
-    url('https://github.githubassets.com/assets/Mona-Sans.woff2') format('woff2 supports variations'),
-    url('https://github.githubassets.com/assets/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
+  font-family: 'Mona Sans Bold';
+  src: url('/fonts/MonaSans_Expanded-Bold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
-  font-display: swap;
 }
 
-.font-mona {
-  font-family: 'Mona Sans', sans-serif;
+body, .body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 400;
 }
+
+.title {
+  font-family: 'Mona Sans Bold', sans-serif;
+  font-weight: 500;
+}
+
+.small {
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 400;
+}
+
+.bold-body{
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 600;
+}
+
+.small-body {
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 400;
+}
+
+.titles-h4{
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 500;
+}
+
+.big-body {
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 400;
+}
+
+.small-button {
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 400;
+}
+
+.bold-small-body {
+  font-family: 'Mona Sans Body', sans-serif;
+  font-weight: 600;
+}
+
 
 .underline-active::after {
     content: '';
@@ -63,4 +110,3 @@ body {
     height: 1.5px; /* Adjust thickness of the underline */
     background-color: #050505; /* Color of the underline */
 }
-
