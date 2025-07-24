@@ -1,7 +1,10 @@
 import { Product } from '@/app/components/types';
 import { useEffect, useState } from 'react';
+import { useRouter } from "next/navigation";
+
 
 export default function RelatedProducts() {
+    const router = useRouter();
     const [products, setProducts] = useState<Product[] | null>(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -39,7 +42,7 @@ export default function RelatedProducts() {
             <h2 className="sm:text-5xl text-2xl sm:mb-6 mb-7">Related Products</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {products && products.slice(startIndex, endIndex).map((product) => (
-                    <div key={product.id} className="text-left">
+                    <div key={product.id} className="text-left" onClick={() => router.push(`/shop/product/${product.id}`)}>
                         <img
                             src={product.img}
                             alt={product.product}

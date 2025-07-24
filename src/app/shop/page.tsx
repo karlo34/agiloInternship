@@ -39,7 +39,7 @@ const Shop = () => {
                             <ArrowRightIcon className="w-5 h-5 text-black group-hover:text-white" />
                         </button>
                     </div>
-                    <button className="flex sm:hidden items-center w-[75px] h-[32px] rounded-sm px-4 py-1 text-xs font-medium text-white bg-black">
+                    <button className="flex sm:hidden items-center justify-center w-[75px] h-[32px] rounded-sm text-xs font-medium text-white bg-black">
                         View All
                     </button>
                 </div>
