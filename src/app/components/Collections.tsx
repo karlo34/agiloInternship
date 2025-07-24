@@ -88,8 +88,8 @@ export default function Collection({ products }: Props) {
                                     <div>
                                         <h3 className="sm:text-base text-xs  small-body sm:small truncate">{product.product}</h3>
                                         <div className="mt-1 flex justify-between items-center">
-                                            <p className="text-xs font-semibold text-[#DF4718]">{product.discount}€</p>
-                                            <p className="text-xs bold-small-body sm:bold-body text-gray-500 line-through">{product.price}€</p>
+                                            <p className="text-xs bold-small-body text-[#DF4718]">{product.discount}€</p>
+                                            <p className="text-xs small-body text-gray-500 line-through">{product.price}€</p>
                                         </div>
                                     </div>
                                 ) : (
