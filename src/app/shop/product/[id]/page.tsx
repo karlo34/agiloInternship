@@ -9,7 +9,7 @@ import { Product } from '@/app/components/types';
 import Navbar from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import DownProductSection from '@/app/components/DownProductSection';
-import RelatedProducts from '@/app/components/RelatedProduxts';
+import RelatedProducts from '@/app/components/RelatedProducts';
 
 const ProductDetails = () => {
     const { id: idParam } = useParams();
