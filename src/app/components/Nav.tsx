@@ -61,7 +61,7 @@ const Navbar = () => {
                     className={`flex sm:hidden hover:text-gray-700 z-50`}
                     onClick={handleMenuToggle}
                 >
-                    <Menu className={`w-5 h-5 ${isMenuOpen ? "text-white" : "text-black"}`} />
+                    <Menu className={`w-5 h-5 ${isHomePage ? "text-white" : isMenuOpen ? "text-white" : "text-black"}`} />
                 </button>
             </div>
 
