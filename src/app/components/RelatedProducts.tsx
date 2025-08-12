@@ -47,6 +47,7 @@ export default function RelatedProducts() {
                             src={product.img}
                             alt={product.product}
                             className="w-full h-auto object-cover mb-4"
+                            loading='lazy' //nadodano kasnije
                         />
 
                         {product.discount && product.discount > 0 ? (

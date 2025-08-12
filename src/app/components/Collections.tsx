@@ -59,7 +59,7 @@ export default function Collection({ products }: Props) {
 
     return (
         <div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8">
+            <div className="mx-[6%] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8">
                 {currentProducts.map((product) => {
                     return (
                         <div key={product.id} className="flex flex-col w-full">

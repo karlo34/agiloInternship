@@ -26,8 +26,8 @@ const Shop = () => {
     return (
         <div className="min-h-[100vh]">
             <Navbar />
-            <div className="mx-[6%]">
-                <div className="flex items-center justify-between mb-8 mt-10">
+            <div className="">
+                <div className="mx-[6%] flex items-center justify-between mb-8 mt-10">
                     <h1 className="sm:text-5xl big-body sm:title text-2xl">
                         Collections
                     </h1>
@@ -48,9 +48,9 @@ const Shop = () => {
                         <CollectionSection products={products ?? []} maxItems={4} />
                     )
                 }
-                <h1 className="text-2xl md:text-5xl big-body sm:title sm:mt-30 sm:mb-10 mt-15 mb-5">Shop</h1>
+                <h1 className="mx-[6%] text-2xl md:text-5xl big-body sm:title sm:mt-30 sm:mb-10 mt-15 mb-5">Shop</h1>
 
-                <div className="flex flex-wrap justify-between gap-4 mb-8 text-sm">
+                <div className="flex flex-wrap justify-between gap-4 mb-8 text-sm mx-[6%]">
                     <div className="flex flex-wrap gap-4">
                         <div className="relative sm:hidden small-body sm:body">
                             <select className="block sm:hidden px-2 border items-center rounded-sm h-[33px] w-[73px] bg-white text-center pr-8 appearance-none border-gray-200 text-xs">

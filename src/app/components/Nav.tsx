@@ -2,20 +2,24 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Search, ShoppingBag, ChevronDown, Menu } from "lucide-react";
-
+import { usePathname } from "next/navigation";
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State for the sliding menu
+
+    const pathname = usePathname();
+    const isHomePage = pathname === "/";
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle the menu state
     };
 
     return (
-        <nav className="mb-[0px] pt-[31px] sm:mb-[106px] px-10 sm:px-[6%] flex flex-wrap items-center justify-between relative w-full">
+        <nav className={`mb-[0px] pt-[31px] sm:mb-[106px] px-10 sm:px-[6%] flex flex-wrap items-center justify-between relative w-full z-50 ${
+        isHomePage ? "text-white" : "text-black"}`}>
             <h1 className="text-2xl title whitespace-nowrap">
                 <Link href="/">SofaSocietyCo.</Link>
             </h1>
-            
+
             {/* Desktop menu */}
             <ul className="hidden sm:flex items-center gap-10 text-sm tracking-wide mr-10">
                 <li className="hover:text-gray-700 transition">
@@ -63,9 +67,8 @@ const Navbar = () => {
 
             {/* Sliding Menu for Mobile */}
             <div
-                className={`fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 z-10 transform transition-transform duration-400 ${
-                    isMenuOpen ? "translate-x-0" : "translate-x-full"
-                }`}
+                className={`fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 z-10 transform transition-transform duration-400 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+                    }`}
             >
                 <div className="flex flex-col items-center justify-center h-full text-white">
                     <ul className="text-2xl space-y-6">

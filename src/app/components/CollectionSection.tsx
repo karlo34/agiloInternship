@@ -15,7 +15,7 @@ export default function CollectionSection({ products, maxItems }: Props) {
     const displayProducts = maxItems ? products.slice(0, maxItems) : products;
 
     return (
-        <div className="flex justify-between sm:gap-x-4 gap-x-6 gap-y-6">
+        <div className="flex justify-between ml-[6%] mr-[0%] sm:mr-[6%] sm:gap-x-4 gap-x-6 gap-y-6 overflow-x-hidden">
             {displayProducts.map((product) => {
                 return (
                     <div
@@ -24,7 +24,6 @@ export default function CollectionSection({ products, maxItems }: Props) {
                         className="flex flex-col w-[292px]"
                     >
                         <div className="relative overflow-hidden sm:h-[390px] sm:w-[292px] h-[343px] w-[240px]">
-                            {/* ← Paste the dynamic className here */}
                             <Image
                                 src={product.img}
                                 alt={product.product}
