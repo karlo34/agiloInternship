@@ -4,9 +4,9 @@ export default function LegalPage() {
     return (
         <div className="">
             <Navbar />
-            <h1 className="text-5xl text-center font-medium">Privacy Policy for Sofa Society</h1>
+            <h1 className="text-5xl text-center font-medium mt-30 sm:mt-0">Privacy Policy for Sofa Society</h1>
             <section className="w-full my-5 flex justify-center">
-                <div className="w-full max-w-4xl px-30 pr-[200px] leading-[1.4] flex flex-col gap-16 my-20">
+                <div className="w-full max-w-4xl px-30 sm:pr-[200px] leading-[1.4] flex flex-col gap-16 my-20">
                     <p>At Sofa Society, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you interact with our website, services, and products. By using our platform, you consent to the practices described in this policy.</p>
                     <div className="flex flex-col gap-4">
                         <h1 className="text-2xl font-semibold">1. Information We Collect:</h1>
