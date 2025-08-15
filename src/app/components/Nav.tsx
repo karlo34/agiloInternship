@@ -3,19 +3,30 @@ import { useState } from "react";
 import Link from "next/link";
 import { Search, ShoppingBag, ChevronDown, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
-const Navbar = () => {
+
+import { useIsSmUp } from '../hooks/useIsSm';
+
+interface Props {
+    isAbout ?: boolean;
+}
+const Navbar = ({ isAbout  }: Props) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State for the sliding menu
+    const isSmUp = useIsSmUp();
 
     const pathname = usePathname();
     const isHomePage = pathname === "/";
+    const isAboutUs = pathname === "/about";
+    const isLargeScreen = window.innerWidth >= 640;
+
+    const textColor = isHomePage ? "text-white" : isAboutUs && isSmUp ? "text-white" : "text-black";
+
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle the menu state
     };
 
     return (
-        <nav className={`mb-[0px] pt-[31px] sm:mb-[106px] px-10 sm:px-[6%] flex flex-wrap items-center justify-between relative w-full z-50 ${
-        isHomePage ? "text-white" : "text-black"}`}>
+        <nav className={`mb-[0px] pt-[31px] sm:mb-[106px] px-10 sm:px-[6%] flex flex-wrap items-center justify-between relative w-full z-50 ${textColor}`}>
             <h1 className="text-2xl title whitespace-nowrap">
                 <Link href="/">SofaSocietyCo.</Link>
             </h1>
@@ -23,7 +34,7 @@ const Navbar = () => {
             {/* Desktop menu */}
             <ul className="hidden sm:flex items-center gap-10 text-sm tracking-wide mr-10">
                 <li className="hover:text-gray-700 transition">
-                    <Link href="#">About</Link>
+                    <Link href="/about">About</Link>
                 </li>
                 <li className="hover:text-gray-700 transition">
                     <Link href="#">Inspiration</Link>
@@ -61,7 +72,7 @@ const Navbar = () => {
                     className={`flex sm:hidden hover:text-gray-700 z-50`}
                     onClick={handleMenuToggle}
                 >
-                    <Menu className={`w-5 h-5 ${isHomePage ? "text-white" : isMenuOpen ? "text-white" : "text-black"}`} />
+                    <Menu className={`w-5 h-5 ${textColor}`} />
                 </button>
             </div>
 
@@ -73,7 +84,7 @@ const Navbar = () => {
                 <div className="flex flex-col items-center justify-center h-full text-white">
                     <ul className="text-2xl space-y-6">
                         <li>
-                            <Link href="#" onClick={handleMenuToggle}>About</Link>
+                            <Link href="/about" onClick={handleMenuToggle}>About</Link>
                         </li>
                         <li>
                             <Link href="#" onClick={handleMenuToggle}>Inspiration</Link>
