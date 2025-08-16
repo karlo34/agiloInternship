@@ -16,7 +16,6 @@ const Navbar = ({ isAbout  }: Props) => {
     const pathname = usePathname();
     const isHomePage = pathname === "/";
     const isAboutUs = pathname === "/about";
-    const isLargeScreen = window.innerWidth >= 640;
 
     const textColor = isHomePage ? "text-white" : isAboutUs && isSmUp ? "text-white" : "text-black";
 

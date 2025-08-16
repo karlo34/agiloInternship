@@ -31,9 +31,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/mona-sans@1.0.0/css/mona-sans.min.css"
         />
       </head>
-      <html lang="en">
         <body>{children}</body>
-      </html>
     </html>
   );
 }
