@@ -37,12 +37,12 @@ export default function Home() {
       <Navbar />
       <div className="w-full aspect-[16/9]"></div>
       <div className="flex flex-wrap items-center justify-between mx-[6%] leading-[1.4] gap-y-5">
-        <div className="w-150 mb-10 md:mb-10 lg:mb-10 xl:mb-0 gap-40">
+        <div className="w-170 mb-10 md:mb-10 lg:mb-10 xl:mb-0 gap-39">
           <h1 className="text-5xl font-medium">
-            Elevate Your Living Space with <br /> Unmatched Comfort & Style
+            Elevate Your Living Space with Unmatched Comfort & Style
           </h1>
         </div>
-        <div className="text-2xl w-135">
+        <div className="text-2xl">
           <p>
             Discover Your Perfect Sofa Today
           </p>
