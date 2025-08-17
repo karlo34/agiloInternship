@@ -37,7 +37,8 @@ export default function AboutPage() {
                     />
                 </div>
             </div>
-            <div className="w-[44.25rem] mx-[6%] my-26">
+            {/* make responsive!!! */}
+            <div className="w-[30rem] md:w-[44.25rem] mx-[6%] my-26">
                 <h1 className="text-2xl font-normal md:text-5xl md:font-medium leading-[1.4] pb-10">We are here to make your living space a true reflection of your personal style.</h1>
                 <p className="pr-55 leading-[1.4]">
                     At the heart of our brand is a deep commitment to quality. We understand that a sofa isn’t just another piece of furniture; it’s where you unwind, gather with loved ones, and make memories. That’s why we source only the finest materials and fabrics, ensuring that every sofa we offer is built to last.
@@ -45,11 +46,24 @@ export default function AboutPage() {
                     From luxurious leathers and soft linens to high-performance textiles, each fabric is carefully selected for its durability and beauty. Our attention to detail extends to every stitch and seam, guaranteeing that your sofa will not only look stunning but will also withstand the test of time.
                 </p>
             </div>
+            <div className="flex flex-wrap mx-[6%] justify-between">
+                <div className="relative h-[20rem] md:h-[32rem] lg:h-[50rem] md:w-[25rem] lg:w-[35rem] w-full">
+                    <Image
+                        src="/slike/details_img.png"
+                        alt="Our Design Philosophy"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+                <div className="w-full md:w-[15rem] lg:w-[30.75rem] px-4 md:px-0">
+                    <p className="pb-36">Our design philosophy revolves around creating pieces that are both beautiful and practical. Inspired by Scandinavian simplicity, modern luxury, and timeless classics, our collections are curated to suit a wide variety of tastes and lifestyles. We understand that every home is different, so we offer a diverse range of styles, colors, and textures to help you find the perfect fit. Whether you prefer sleek modern lines or soft, inviting silhouettes, we have something to suit every space and personality.</p>
+                    <p>We believe that great design should be environmentally conscious, which is why we strive to minimise our environmental footprint through responsible sourcing and production practices. Our commitment to sustainability ensures that our products are not only beautiful but also kind to the planet.</p>
+
+                </div>
+            </div>
             <div className="relative w-full z-10">
                 <Footer />
             </div>
         </div>
     )
 }
-
-// 400 24
